@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.abb{
+    background-color: rgb(29, 8, 73);
+    margin-left: 100px;
+    height:70vh;
+    margin-right: 100px;
+    margin-top: 40px;
+    
+}
+.abaa .aaa {
+background-color: #3cbfa7;
+   width: 30%;
+    font: 50px;
+    height:10vh;
+    margin-left: 100px;
+    margin-right: 99px;
+    margin-top: 10px;
+    color:wheat;
+    font-weight: bold;
+
+}
+#ax{
+    width:30%;
+    border-radius: 40px;
+    margin-left: 30%;
+}
+.abaa img{
+    width:90%;
+    margin-left: -60%;
+    border-radius: 40px;
+    
+    
+
+}
+body{
+    
+    overflow-x: hidden;
+}
+
+
+.main{
+    width: 100%;
+    background-color: #ccc;
+    background-position: center;
+    background-size: cover;
+    
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    background-color: #b2bfbd;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #06031c;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #fff;
+}
+
+.sub-menu-1{
+    display: none;
+
+
+}
+.menu ul li:hover .sub-menu-1{
+    display:block;
+    position:absolute;
+    background:  #b2bfbd;
+    margin-top: 0;
+    margin-left: -15px;
+
+}
+.menu ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin:10px;
+}
+.menu ul li:hover .sub-menu-1 ul li{
+    width:150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background-color: transparent;
+    border-radius: 0;
+    text-align: left;
+
+
+
+
+}
+.menu ul li:hover .sub-menu-1 ul li:last-child{
+border-bottom: none;
+}
+.menu ul li:hover .sub-menu-1 ul li a:hover{
+    color: #fff;
+}
+
+.search{
+    width: 300px;
+    float: left;
+    margin-left: 200px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid black;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: rgb(30, 14, 126);
+    
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+/* style.css */
+label {
+    display: block;
+    margin-bottom: 0;
+    margin-left: 40px;
+    font-size: 16px;
+  }
+  
+  #dropdown {
+    width: 200px; /* Set the desired width of the dropdown */
+    height: 40px; /* Set the desired height of the dropdown */
+    margin-left: 70px;
+    font-size: 16px; /* Adjust font size to match the dropdown size */
+    border: 1px solid #ccc; /* Add a border to the dropdown */
+    border-radius: 5px; /* Add rounded corners */
+    outline: none; /* Remove focus outline */
+  }
+.grid0{
+    display: grid;
+    grid-template-columns: repeat(2, 0fr); /* Creates 3 equal-width columns */
+    gap: 0;
+
+}
+#gr{
+    width: 120px; /* Set the desired width of the dropdown */
+    height: 40px; /* Set the desired height of the dropdown */
+    margin-left: 0;
+    color: aliceblue;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  
+    font-size: 16px; /* Adjust font size to match the dropdown size */
+
+}
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 5px;   
+  }
+  
+  .check input{
+    font-size: 30px;
+    margin-left: 70px;
+    
+  }
+  
+  .grid{
+    display: grid;
+    
+    grid-template-columns: repeat(5, 1fr); /* Creates 3 equal-width columns */
+    gap: 5px;   
+  }
+  .item h3{
+    margin-left: 30px;
+    line-height: 0; 
+    color: rgb(80, 74, 66);
+  }
+  #gede{
+    width: 100px; /* Set the desired width of the dropdown */
+    height: 40px; /* Set the desired height of the dropdown */
+    margin-left: 70px;
+    font-size: 16px; /* Adjust font size to match the dropdown size */
+    border: 1px solid #ccc; /* Add a border to the dropdown */
+    border-radius: 5px; /* Add rounded corners */
+    outline: none; /* Remove focus outline */
+}
+#gede2{
+    width:100px;
+    height:40px;
+    border-radius: 30px;
+
+    background-color: rgb(79, 37, 196);
+}
+.depart h3{
+    margin-left: 30px;
+    line-height: 0;
+    color: rgb(59, 54, 44);
+}
+
+.check h6{
+    font-size: 20px;
+    color: white;
+}
+/* Featured Destination*/
+.abcdef{
+    display: flex;
+    display: block;
+
+}
+
+.features{
+    padding: 100px 0;
+
+
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.feature-img img{
+    width:80%;
+    height: auto;
+    justify-content: space-between;
+    
+    margin-left: 6%;
+    padding: 10px;
+    max-width: 1200px;
+    display: flex;
+    border-radius: 20px;
+}
+.price{
+    width:30px;
+    margin-left: 20px;
+    height:30px;
+    background: rgb(255, 0, 174);
+    color:white;
+    font-weight: 600;
+    border-radius: 50%;
+    padding:10px;
+    box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
+    position: absolute;
+    left:20px;
+    bottom: -15px;
+
+
+}
+.feature-details p{
+    font-size: 18px;
+    margin-left: 6%;
+
+}
+.feature-details h4{
+    font-size: 30px;
+    margin-left: 6%;
+    color: #60bbf4;
+}
+.feature-img{
+    position: relative;
+
+}
+
+/*Galley*/
+
+.abcdef{
+    display: flex;
+    display: block;
+
+}
+
+.features{
+    padding: 100px 0;
+
+
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.feature-img img{
+    width:80%;
+    height: auto;
+    justify-content: space-between;
+    
+    margin-left: 6%;
+    padding: 10px;
+    max-width: 1200px;
+    display: flex;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airplane Ticket Booking - Personal Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: blanchedalmond;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            
+            background-color: rgb(217, 19, 19);
+            
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c54355;
+        }
+    </style>
+</head>
+<body>
+    <h2>Personal Information</h2>
+
+<form action="/submit_booking" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="passport">Passport Number:</label>
+    <input type="text" id="passport" name="passport" required>
+
+
+
+    
+    <label for="passengers">Number of Passengers:</label>
+    <input type="number" id="passengers" min="1" value="1" onchange="calculateAmount()" required>
+    <br>
+
+    <label for="amount">Total Amount (INR):</label>
+    <input type="number" id="amount" readonly>
+    <br>
+
+    
+</form>
+
+<!-- Include the Razorpay JavaScript SDK -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+    function calculateAmount() {
+        var passengers = document.getElementById("passengers").value;
+        var baseFare = 10000; // Replace with your base fare amount per passenger
+
+        // Calculate the total amount based on the number of passengers
+        var totalAmount = baseFare * passengers;
+
+        // Update the amount field with the calculated total
+        document.getElementById("amount").value = totalAmount;
+    }
+
+    function makePayment() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var amount = document.getElementById("amount").value * 100; // Convert to paise (Indian currency)
+
+        var options = {
+            key: "YOUR_RAZORPAY_KEY_ID", // Replace with your Razorpay Key ID
+            amount: amount,
+            currency: "INR",
+            name: "Airplane Ticket",
+            description: "Payment for Airplane Ticket Booking",
+            image: "https://example.com/logo.png", // Replace with your logo URL
+            handler: function (response) {
+                // This function will be executed when the payment is successful
+                alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+            },
+            prefill: {
+                name: name,
+                email: email
+            },
+            notes: {
+                // Add any additional notes if required
+            }
+        };
+
+        var rzp = new Razorpay(options);
+        rzp.open();
+    }
+</script>
+
+<br><br>
+
+    <input type="submit" onclick="makePayment()" value=" Pay and Submit">
+</form>
+
+</body>
+</html>
